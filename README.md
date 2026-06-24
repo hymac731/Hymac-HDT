@@ -4,9 +4,8 @@
 > 基于开源 [HearthSim/HSTracker](https://github.com/HearthSim/HSTracker) 改造，整合了 [z2z63/hearthstone_skipper](https://github.com/z2z63/hearthstone_skipper) 的拔线思路。
 > **个人自用 / 学习交流**。仅 macOS。
 
-**当前版本：正式版 1.0**  
-Release 附件：`Hymac.HDT-1.0.dmg`  
-SHA256：`5caa40dd4810922c66f3a13409da0eb98cc15fea152d8676c54b922a90477803`
+**当前版本：自用正式版 1.0**  
+Release 附件：`Hymac.HDT-1.0.dmg`
 
 <!-- 截图位：把游戏内截图传到仓库后，改成 ![预览](screenshot.png) -->
 
