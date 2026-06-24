@@ -4,6 +4,10 @@
 > 基于开源 [HearthSim/HSTracker](https://github.com/HearthSim/HSTracker) 改造，整合了 [z2z63/hearthstone_skipper](https://github.com/z2z63/hearthstone_skipper) 的拔线思路。
 > **个人自用 / 学习交流**。仅 macOS。
 
+**当前版本：正式版 1.0**  
+Release 附件：`Hymac自用HDT-1.0.dmg`  
+SHA256：`5caa40dd4810922c66f3a13409da0eb98cc15fea152d8676c54b922a90477803`
+
 <!-- 截图位：把游戏内截图传到仓库后，改成 ![预览](screenshot.png) -->
 
 ---
@@ -56,7 +60,7 @@ Windows 上有「团子版 HDT」，能侦察对手阵容、模拟胜率、还�
 
 ## 安装
 
-到 **[Releases](../../releases)** 下载 `Hymac自用HDT.dmg`，打开后照里面的 `安装教程.txt` 做：
+到 **[Releases](../../releases)** 下载 `Hymac自用HDT-1.0.dmg`，打开后照里面的 `安装教程.txt` 做：
 
 1. `Hymac自用HDT.app` 拖进「应用程序」。
 2. 右键 `① 本地重签（先跑这个）.command` →「打开」（去隔离 + 用你机器身份重签，让读内存权限生效）。
