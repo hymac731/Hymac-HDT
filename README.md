@@ -32,6 +32,8 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ### 1.2 更新内容
 
+- 修复启动时可能反复弹出「辅助功能访问」提示的问题：正常打开 App 时只做静默检查；只有重新录制快捷键时才会主动请求辅助功能权限。
+- 更新安装/升级说明：推荐通过终端运行本地重签脚本，避免新版 macOS 拦截 `.command` 文件。
 - 新增「拔线设置」看板：在红色拔线按钮旁边的齿轮里，可以直接看到 Clash 是否连接、进程识别是否可用、当前拔线模式、目标连接和安全状态。
 - 新增「最近一次拔线耗时」：显示读取连接、匹配目标、删除连接和总耗时，方便判断慢是在 HDT 本地操作，还是炉石后续重连阶段。
 - 新增「导出诊断」：一键生成诊断报告，默认保存到桌面，方便排查不同 Clash Verge 环境下的兼容问题。
@@ -50,12 +52,20 @@ Hymac.HDT-1.2.dmg
 
 1. 打开 DMG。
 2. 把 `Hymac自用HDT.app` 拖进「应用程序」。
-3. 运行 `① 本地重签（先跑这个）.command`。
-4. 系统设置 → 隐私与安全性：
+3. 打开「终端」，运行：
+
+```bash
+bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+```
+
+4. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
+5. 系统设置 → 隐私与安全性：
    - 勾选「屏幕录制」里的 `Hymac自用HDT`
    - 勾选「辅助功能」里的 `Hymac自用HDT`
-5. 完全退出并重新打开 `Hymac自用HDT`。
-6. 进炉石，看到覆盖层/阵容信息即安装成功。
+6. 完全退出并重新打开 `Hymac自用HDT`。
+7. 进炉石，看到覆盖层/阵容信息即安装成功。
+
+如果 macOS 提示无法验证 `.command` 是否包含恶意软件，不要点「移到废纸篓」，直接用上面的终端命令运行即可。
 
 ### 版本更新
 
@@ -64,7 +74,12 @@ Hymac.HDT-1.2.dmg
 1. 打开新版 DMG。
 2. 把新的 `Hymac自用HDT.app` 拖进「应用程序」。
 3. 系统提示已存在同名 app 时，选择「替换」。
-4. 替换后再次运行 `① 本地重签（先跑这个）.command`。
+4. 替换后再次打开「终端」，运行：
+
+```bash
+bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+```
+
 5. 打开 app 测试。
 
 如果更新后看不到阵容或覆盖层，重新检查「屏幕录制」和「辅助功能」权限，必要时取消勾选后重新勾选，并重启 app。
@@ -135,6 +150,8 @@ This is a personal-use tool for learning and convenience. It is not an official 
 
 ### Version 1.2 Updates
 
+- Fixed repeated macOS Accessibility permission prompts on normal app launch. The app now checks permission silently at startup and only prompts when recording a new hotkey.
+- Updated install/update instructions. Running the local re-sign script through Terminal is recommended to avoid `.command` blocking on newer macOS versions.
 - Added a reconnect settings panel next to the red reconnect button. It shows Clash connection status, process recognition, reconnect mode, target connection, and safety status.
 - Added last reconnect timing. It shows connection read time, target matching time, delete time, and total local HDT time. This helps separate local HDT work from the later Hearthstone reconnect phase.
 - Added diagnostic export. The report is saved to the Desktop and helps troubleshoot different Clash Verge setups.
@@ -153,12 +170,20 @@ Hymac.HDT-1.2.dmg
 
 1. Open the DMG.
 2. Drag `Hymac自用HDT.app` into `Applications`.
-3. Run `① 本地重签（先跑这个）.command`.
-4. In macOS System Settings → Privacy & Security, allow `Hymac自用HDT` under:
+3. Open Terminal and run:
+
+```bash
+bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+```
+
+4. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
+5. In macOS System Settings → Privacy & Security, allow `Hymac自用HDT` under:
    - Screen Recording
    - Accessibility
-5. Quit and reopen `Hymac自用HDT`.
-6. Launch Hearthstone. If the overlay and board information appear, installation is complete.
+6. Quit and reopen `Hymac自用HDT`.
+7. Launch Hearthstone. If the overlay and board information appear, installation is complete.
+
+If macOS says it cannot verify whether the `.command` file contains malware, do not move it to Trash. Use the Terminal command above instead.
 
 ### Updating From an Older Version
 
@@ -167,7 +192,12 @@ You do not need to manually delete the old app:
 1. Open the new DMG.
 2. Drag the new `Hymac自用HDT.app` into `Applications`.
 3. Choose `Replace` when macOS asks.
-4. Run `① 本地重签（先跑这个）.command` again.
+4. Open Terminal and run:
+
+```bash
+bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+```
+
 5. Open the app and test it.
 
 If the overlay or opponent boards do not appear after updating, re-check Screen Recording and Accessibility permissions. Toggle them off and on again if needed, then restart the app.
