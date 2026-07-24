@@ -6,8 +6,8 @@
 基于开源 [HearthSim/HSTracker](https://github.com/HearthSim/HSTracker) 改造，参考 [z2z63/hearthstone_skipper](https://github.com/z2z63/hearthstone_skipper) 的连接处理思路。  
 Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthSim/HSTracker), with the reconnect idea inspired by [z2z63/hearthstone_skipper](https://github.com/z2z63/hearthstone_skipper).
 
-**当前版本 / Current version:** 自用正式版 1.2 / Personal Stable Release 1.2  
-**Release 附件 / Release asset:** `Hymac.HDT-1.2.dmg`
+**当前版本 / Current version:** 自用正式版 1.3 / Personal Stable Release 1.3  
+**Release 附件 / Release asset:** `Hymac.HDT-1.3.dmg`
 
 ---
 
@@ -30,22 +30,20 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 战棋面板可通过设置放到游戏右侧。
 
-### 1.2 更新内容
+### 1.3 更新内容
 
-- 修复启动时可能反复弹出「辅助功能访问」提示的问题：正常打开 App 时只做静默检查；只有重新录制快捷键时才会主动请求辅助功能权限。
-- 更新安装/升级说明：推荐通过终端运行本地重签脚本，避免新版 macOS 拦截 `.command` 文件。
-- 新增「拔线设置」看板：在红色拔线按钮旁边的齿轮里，可以直接看到 Clash 是否连接、进程识别是否可用、当前拔线模式、目标连接和安全状态。
-- 新增「最近一次拔线耗时」：显示读取连接、匹配目标、删除连接和总耗时，方便判断慢是在 HDT 本地操作，还是炉石后续重连阶段。
-- 新增「导出诊断」：一键生成诊断报告，默认保存到桌面，方便排查不同 Clash Verge 环境下的兼容问题。
-- 优化兼容模式：当 Clash Verge 没有提供炉石进程路径时，使用更谨慎的 1119 端口纯 IP 连接规则，尽量只断炉石游戏服连接。
-- 保留原有能力：对手阵容、胜率模拟、流派参考、右侧战棋面板、一键重连/跳过战斗动画。
+- 底层升级到 HSTracker 3.6.2，适配 Hearthstone 36.0.3。
+- 合入上游 Battlegrounds、Bob's Buddy、Duos 和重连识别相关修复。
+- 稳定模式只识别 Hearthstone 进程的纯 IP `3724` 游戏连接；无进程路径时，兼容模式仍只匹配纯 IP `1119` 连接。
+- 「没了 下一把吧」只在战棋已被官方状态标记为结束时拦截，不使用 Bob's Buddy 胜率预测做判断。
+- 保留 1.2 的拔线按钮、状态看板、耗时显示、诊断导出、阵容/面板恢复、自定义图标和关闭自动更新。
 
 ### 下载
 
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-1.2.dmg
+Hymac.HDT-1.3.dmg
 ```
 
 ### 首次安装
@@ -55,7 +53,7 @@ Hymac.HDT-1.2.dmg
 3. 打开「终端」，运行：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 1.3/① 本地重签（先跑这个）.command"
 ```
 
 4. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -77,7 +75,7 @@ bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
 4. 替换后再次打开「终端」，运行：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 1.3/① 本地重签（先跑这个）.command"
 ```
 
 5. 打开 app 测试。
@@ -98,7 +96,7 @@ Clash 在这里只是本地连接管理工具；追踪、胜率和阵容功能�
 
 自用版HDT 不会关闭 Wi-Fi，也不会让整台电脑断网。它会通过 Clash Verge 的本地连接接口读取当前网络连接，识别炉石的游戏服连接后，只删除这条连接。炉石客户端会进入短暂断线并自动重连，从而跳过一部分战斗动画。
 
-正常情况下会优先使用 Clash 提供的 Hearthstone 进程路径来识别目标连接；如果个别电脑的 Clash Verge 不提供进程路径，1.2 会进入兼容模式，只匹配更谨慎的 1119 端口炉石纯 IP 连接。
+正常情况下，稳定模式会使用 Clash 提供的 Hearthstone 进程路径，只识别纯 IP `3724` 游戏连接。如果个别电脑的 Clash Verge 不提供进程路径，1.3 会进入兼容模式，只匹配更谨慎的纯 IP `1119` 连接。带域名的战网连接不会被当作默认拔线目标。
 
 点红色「拔线」按钮旁边的齿轮，可以查看当前 Clash 状态：
 
@@ -148,22 +146,20 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Attempts to restore remembered opponent board states after reconnecting.
 - Optional setting to place the Battlegrounds session panel on the right side.
 
-### Version 1.2 Updates
+### Version 1.3 Updates
 
-- Fixed repeated macOS Accessibility permission prompts on normal app launch. The app now checks permission silently at startup and only prompts when recording a new hotkey.
-- Updated install/update instructions. Running the local re-sign script through Terminal is recommended to avoid `.command` blocking on newer macOS versions.
-- Added a reconnect settings panel next to the red reconnect button. It shows Clash connection status, process recognition, reconnect mode, target connection, and safety status.
-- Added last reconnect timing. It shows connection read time, target matching time, delete time, and total local HDT time. This helps separate local HDT work from the later Hearthstone reconnect phase.
-- Added diagnostic export. The report is saved to the Desktop and helps troubleshoot different Clash Verge setups.
-- Improved compatibility mode. If Clash Verge does not provide the Hearthstone process path, 1.2 uses a stricter 1119-port pure-IP fallback to avoid disconnecting unrelated traffic.
-- Existing tracker features remain: opponent boards, win-rate simulation, Battlegrounds helper panels, right-side panel option, and one-click reconnect / combat animation skip.
+- Updated the upstream base to HSTracker 3.6.2 for Hearthstone 36.0.3.
+- Included upstream Battlegrounds, Bob's Buddy, Duos, and reconnect-detection fixes.
+- Stable mode now targets only the Hearthstone process's pure-IP port `3724` game connection. Compatibility mode remains limited to pure-IP port `1119` when process information is unavailable.
+- The "game is over" block is based only on the official ended-game state, never on Bob's Buddy win-rate predictions.
+- Kept the 1.2 reconnect button, status panel, timing display, diagnostic export, overlay restoration, custom icon, and disabled automatic updates.
 
 ### Download
 
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-1.2.dmg
+Hymac.HDT-1.3.dmg
 ```
 
 ### First-Time Installation
@@ -173,7 +169,7 @@ Hymac.HDT-1.2.dmg
 3. Open Terminal and run:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 1.3/① 本地重签（先跑这个）.command"
 ```
 
 4. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -195,7 +191,7 @@ You do not need to manually delete the old app:
 4. Open Terminal and run:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 1.2/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 1.3/① 本地重签（先跑这个）.command"
 ```
 
 5. Open the app and test it.
@@ -216,7 +212,7 @@ Clash is only used for local connection management. Tracking, win-rate simulatio
 
 Hymac HDT does not turn off Wi-Fi and does not disconnect the whole Mac. It reads the current connection list through Clash Verge's local connection API, identifies the Hearthstone game-server connection, and closes only that connection. Hearthstone then briefly disconnects and reconnects, which can skip part of the combat animation.
 
-When available, the tool uses Clash's Hearthstone process path to identify the target connection. On machines where Clash Verge does not provide the process path, version 1.2 uses a stricter compatibility rule for the 1119-port pure-IP Hearthstone connection.
+When process information is available, stable mode targets only the Hearthstone process's pure-IP port `3724` game connection. If Clash Verge does not provide the process path, version 1.3 uses a stricter compatibility rule for the pure-IP port `1119` connection. Battle.net domain connections are not used as default reconnect targets.
 
 Click the gear button next to the red reconnect button to check Clash status:
 
