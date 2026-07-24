@@ -35,7 +35,8 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 底层升级到 HSTracker 3.6.2，适配 Hearthstone 36.0.3。
 - 合入上游 Battlegrounds、Bob's Buddy、Duos 和重连识别相关修复。
 - 稳定模式只识别 Hearthstone 进程的纯 IP `3724` 游戏连接；无进程路径时，兼容模式仍只匹配纯 IP `1119` 连接。
-- 「没了 下一把吧」只在战棋已被官方状态标记为结束时拦截，不使用 Bob's Buddy 胜率预测做判断。
+- 点击「拔线」时，若战棋已结束，或 Bob's Buddy 当前模拟同时为失败 100% 且致死 100%，则不执行拔线并短暂显示「没了 下一把吧」。
+- 拔线设置显示当前版本 1.3；悬浮按钮已加宽，提示文字可完整显示。退出炉石后，拔线按钮和游戏覆盖层会自动隐藏。
 - 保留 1.2 的拔线按钮、状态看板、耗时显示、诊断导出、阵容/面板恢复、自定义图标和关闭自动更新。
 
 ### 下载
@@ -151,7 +152,8 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Updated the upstream base to HSTracker 3.6.2 for Hearthstone 36.0.3.
 - Included upstream Battlegrounds, Bob's Buddy, Duos, and reconnect-detection fixes.
 - Stable mode now targets only the Hearthstone process's pure-IP port `3724` game connection. Compatibility mode remains limited to pure-IP port `1119` when process information is unavailable.
-- The "game is over" block is based only on the official ended-game state, never on Bob's Buddy win-rate predictions.
+- After Reconnect is clicked, the action is blocked if the Battlegrounds game has ended or the current Bob's Buddy simulation reports both 100% loss and 100% player lethal.
+- The reconnect settings show version 1.3, the wider floating button displays the full message, and the reconnect button and game overlays hide automatically after Hearthstone quits.
 - Kept the 1.2 reconnect button, status panel, timing display, diagnostic export, overlay restoration, custom icon, and disabled automatic updates.
 
 ### Download
