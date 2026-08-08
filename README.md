@@ -41,6 +41,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 稳定模式识别 Hearthstone 进程的纯 IP TCP + TUN 游戏连接，不再固定单一端口；无进程路径时，兼容模式仍只匹配纯 IP `1119` 连接。
 - 新增 Clash `find-process-mode` 检查。检测到 `strict` 时，齿轮面板会引导点击「修复进程识别」改为 `always`，并读取确认结果。
 - 点击「拔线」时，若战棋已结束，或 Bob's Buddy 当前模拟同时为失败 100% 且致死 100%，则不执行拔线并短暂显示「没了 下一把吧」。
+- 修复酒馆面板最近对局无法显示英雄、名次和 MMR 的问题，并补齐“可用随从 / 禁用随从”标题。
 - 保留拔线按钮、状态看板、耗时显示、诊断导出、阵容/面板恢复、自定义图标和关闭自动更新。
 
 ### 下载
