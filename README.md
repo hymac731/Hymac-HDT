@@ -90,11 +90,13 @@ bash "/Volumes/Hymac自用HDT 2.0/① 本地重签（先跑这个）.command"
 
 ### Clash 设置
 
-一键重连功能需要 Clash Verge（mihomo 内核）：
+一键重连功能需要 Clash Verge Rev（mihomo 内核）。第一次使用请先完成以下设置：
 
-1. 开启 TUN 模式。
-2. 使用规则模式。
-3. 确保游戏连接走 DIRECT。
+1. 从 [Clash Verge Rev 官方 GitHub Releases](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 下载并安装 macOS 版本。
+2. 打开 Clash Verge Rev，并在使用 hymac版HDT 时保持运行。**一键重连不需要导入订阅。**
+3. 开启 TUN 模式。
+4. 使用规则模式。
+5. 确保游戏连接走 DIRECT。
 
 Clash 在这里只是本地连接管理工具；追踪、胜率和阵容功能不依赖 Clash。
 
@@ -210,11 +212,13 @@ If the overlay or opponent boards do not appear after updating, re-check Screen 
 
 ### Clash Setup
 
-The reconnect helper requires Clash Verge with the mihomo core:
+The reconnect helper requires Clash Verge Rev with the mihomo core. For first-time setup:
 
-1. Enable TUN mode.
-2. Use Rule mode.
-3. Make sure the game connection stays DIRECT.
+1. Download and install the macOS build from the [official Clash Verge Rev GitHub Releases](https://github.com/Clash-Verge-rev/clash-verge-rev/releases).
+2. Open Clash Verge Rev and keep it running while using Hymac HDT. **No proxy subscription is required for the reconnect helper.**
+3. Enable TUN mode.
+4. Use Rule mode.
+5. Make sure the game connection stays DIRECT.
 
 Clash is only used for local connection management. Tracking, win-rate simulation, and board information do not depend on Clash.
 

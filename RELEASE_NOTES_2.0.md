@@ -16,6 +16,8 @@
 
 打开 DMG，把 `Hymac自用HDT.app` 拖进「应用程序」并选择替换，然后按照 DMG 内教程重新运行本地重签。
 
+首次使用一键重连前，请从 [Clash Verge Rev 官方 GitHub Releases](https://github.com/Clash-Verge-rev/clash-verge-rev/releases) 下载并安装 macOS 版本，打开后保持运行，并设置为 TUN + 规则模式、游戏连接走 DIRECT。**此功能不需要导入订阅。**进程识别需要进入实际对局；进入对局后仍未识别时，请在齿轮面板点击「修复进程识别」。
+
 ---
 
 For Hearthstone 36.2 and Battlegrounds Season 14.
@@ -25,3 +27,5 @@ For Hearthstone 36.2 and Battlegrounds Season 14.
 - Supports dynamic game ports and adds Clash process-mode detection with guided process-recognition repair.
 - Process recognition is expected only during an actual match. If it remains unavailable in a match, use Repair Process Recognition in the gear panel.
 - Fixes missing hero, placement, and MMR details in the recent Battlegrounds games panel, and restores the minion header labels.
+
+For first-time reconnect setup, download and install the macOS build from the [official Clash Verge Rev GitHub Releases](https://github.com/Clash-Verge-rev/clash-verge-rev/releases). Keep it running in TUN + Rule mode and make sure the game connection stays DIRECT. **No proxy subscription is required for the reconnect helper.**
