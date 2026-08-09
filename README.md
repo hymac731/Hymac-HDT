@@ -41,6 +41,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 新增本机游戏连接精确匹配：自动对应 macOS 中的炉石连接与 Clash 连接，不再依赖固定的 `1119` 或 `3724` 端口。
 - 未立即找到连接时会自动重新匹配约 3 秒，并在悬浮按钮和齿轮面板给出下一步提示。
 - 酒馆战棋战绩面板新增拖动、独立宽度调整、整体缩放和锁定功能。
+- 保留历史战绩悬停查看最终阵容；锁定面板后不影响炉石界面正常点击。
 - 新增 Clash `find-process-mode` 检查。检测到 `strict` 时，齿轮面板会引导点击「修复进程识别」改为 `always`，并读取确认结果。
 - 点击「拔线」时，若战棋已结束，或 Bob's Buddy 当前模拟同时为失败 100% 且致死 100%，则不执行拔线并短暂显示「没了 下一把吧」。
 - 修复酒馆面板最近对局无法显示英雄、名次和 MMR 的问题，并补齐“可用随从 / 禁用随从”标题。
@@ -167,6 +168,7 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Exactly matches the local macOS Hearthstone connection to its Clash TCP + TUN connection without relying on a fixed `1119` or `3724` port.
 - Automatically retries for about three seconds and provides clear guidance when the connection is not immediately available.
 - Adds moving, independent width adjustment, uniform scaling, and locking for the Battlegrounds session statistics panel.
+- Keeps final-board previews on history hover while allowing normal Hearthstone clicks when the panel is locked.
 - Added Clash `find-process-mode` detection. When it is `strict`, the gear panel guides the user to select `修复进程识别` / Repair Process Recognition and verifies the change to `always`.
 - After Reconnect is clicked, the action is blocked if the Battlegrounds game has ended or the current Bob's Buddy simulation reports both 100% loss and 100% player lethal.
 - Kept the reconnect button, status panel, timing display, diagnostic export, overlay restoration, custom icon, and disabled automatic updates.
