@@ -9,6 +9,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
 - **当前版本 / Current version:** 自用正式版 2.1 / Personal Stable Release 2.1
+- **正式构建 / Release build:** 148
 - **适用赛季 / Battlegrounds season:** 酒馆战棋第 14 赛季 / Battlegrounds Season 14
 - **游戏版本 / Hearthstone version:** Hearthstone 36.2.2
 - **Release 附件 / Release asset:** `Hymac.HDT-2.1.dmg`
@@ -43,6 +44,9 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 新增 Hymac 版本提醒：每天最多检查一次 GitHub Release，发现新版时可下载、稍后提醒或忽略该版本，不会自动替换 App。
 - 修复 Bob's Buddy 开发自测可能导致 2.1 启动时意外退出的问题。
 - 补齐 Bob's Buddy 真实对局胜率计算所需的双架构运行组件，修复进入战斗后胜率框不显示的问题。
+- 修复拔线重连后战棋类型丢失、胜率与战绩覆盖层无法恢复的问题。
+- 修复重连恢复战绩面板时可能导致 hymac版HDT 意外退出的问题。
+- 拔线设置标题新增构建编号，方便准确确认安装包。
 
 ### 下载
 
@@ -167,6 +171,9 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Added a daily Hymac GitHub Release reminder with Download, Remind Later, and Ignore options. It never replaces the app automatically.
 - Fixed a development-only Bob's Buddy smoke test that could terminate version 2.1 during launch.
 - Included the dual-architecture runtime component required by live Bob's Buddy simulations, fixing a missing combat-odds panel during real matches.
+- Restored the Battlegrounds game type after reconnecting so combat odds and session overlays can resume.
+- Fixed a session-panel layout crash that could terminate Hymac HDT immediately after reconnecting.
+- Added the internal build number to the reconnect settings title for precise package identification.
 
 ### Download
 

@@ -13,6 +13,9 @@
 - 新增 Hymac 版本提醒：每天最多检查一次 GitHub Release，发现新版时可下载、稍后提醒或忽略该版本，不会自动替换 App。
 - 修复 Bob's Buddy 开发自测可能导致 2.1 启动时意外退出的问题。
 - 补齐 Bob's Buddy 真实对局胜率计算所需的双架构运行组件，修复进入战斗后胜率框不显示的问题。
+- 修复拔线重连后战棋类型丢失、胜率与战绩覆盖层无法恢复的问题。
+- 修复重连恢复战绩面板时可能导致 hymac版HDT 意外退出的问题。
+- 拔线设置标题新增构建编号；本次正式包为 `2.1（构建 148）`。
 
 ## 安装或升级
 
@@ -33,6 +36,9 @@ For Hearthstone 36.2.2 and Battlegrounds Season 14.
 - Adds a daily Hymac GitHub Release reminder with Download, Remind Later, and Ignore options. It never replaces the app automatically.
 - Fixes a development-only Bob's Buddy smoke test that could terminate version 2.1 during launch.
 - Includes the dual-architecture runtime component required by live Bob's Buddy simulations, fixing a missing combat-odds panel during real matches.
+- Restores the Battlegrounds game type after reconnecting so combat odds and session overlays can resume.
+- Fixes a session-panel layout crash that could terminate Hymac HDT immediately after reconnecting.
+- Adds the internal build number to the reconnect settings title; this release is `2.1 (build 148)`.
 
 Open the DMG, drag `Hymac自用HDT.app` into Applications and choose Replace, then run the local re-sign command described in the DMG.
 
