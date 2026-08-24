@@ -14,6 +14,17 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - **游戏版本 / Hearthstone version:** Hearthstone 36.2.2
 - **Release 附件 / Release asset:** `Hymac.HDT-2.1.dmg`
 
+> [!CAUTION]
+> **🔴 安装或升级后必须检查覆盖层权限**
+>
+> `① 本地重签（先跑这个）.command` **不能自动打开 macOS 隐私权限**。替换新版并完成本地重签后，请进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，确认 `Hymac自用HDT` 已开启，然后完全退出并重新打开 App。否则可能只看到红色“拔线”按钮，看不到阵容、胜率和战绩覆盖层。
+
+> [!IMPORTANT]
+> **🔴 悬浮组件可以移动和调整**
+>
+> - 红色“拔线”按钮：直接拖动到想要的位置，App 会记住位置。
+> - 酒馆战棋战绩面板：点击面板上方的锁解锁，拖动六点区域移动；可调整“宽度”和“缩放”，完成后再次锁定。
+
 ---
 
 ## 中文说明
@@ -70,6 +81,7 @@ bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 5. 系统设置 → 隐私与安全性：
    - 勾选「屏幕录制」里的 `Hymac自用HDT`
    - 勾选「辅助功能」里的 `Hymac自用HDT`
+   - 本地重签不能自动勾选这些权限，必须由用户手动确认
 6. 完全退出并重新打开 `Hymac自用HDT`。
 7. 进炉石，看到覆盖层/阵容信息即安装成功。
 
@@ -88,7 +100,8 @@ bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 ```
 
-5. 打开 app 测试。
+5. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
+6. 完全退出并重新打开 app 后再测试。
 
 如果更新后看不到阵容或覆盖层，重新检查「屏幕录制」和「辅助功能」权限，必要时取消勾选后重新勾选，并重启 app。
 
@@ -150,6 +163,12 @@ Hymac HDT is a personal macOS build of HSTracker for Hearthstone Battlegrounds. 
 
 This is a personal-use tool for learning and convenience. It is not an official Blizzard, NetEase, HearthSim, or HSTracker release.
 
+> [!CAUTION]
+> **After every install or upgrade, verify overlay permission.** The local re-sign command cannot enable macOS privacy permissions automatically. After replacing and re-signing the app, open System Settings → Privacy & Security → Screen & System Audio Recording, make sure `Hymac自用HDT` is enabled, then fully quit and reopen the app. Otherwise, the red Reconnect button may appear while board, combat-odds, and session overlays remain hidden.
+
+> [!IMPORTANT]
+> **Floating components are adjustable.** Drag the red Reconnect button to move it. For the Battlegrounds session panel, click the lock to unlock it, drag the six-dot handle, adjust Width or Scale, and lock it again when finished.
+
 ### Features
 
 - Opponent board tracking, win-rate simulation, and Battlegrounds helper panels.
@@ -197,6 +216,7 @@ bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 5. In macOS System Settings → Privacy & Security, allow `Hymac自用HDT` under:
    - Screen Recording
    - Accessibility
+   - The local re-sign command cannot enable these permissions for you; they require manual confirmation.
 6. Quit and reopen `Hymac自用HDT`.
 7. Launch Hearthstone. If the overlay and board information appear, installation is complete.
 
@@ -215,7 +235,8 @@ You do not need to manually delete the old app:
 bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 ```
 
-5. Open the app and test it.
+5. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
+6. Fully quit and reopen the app before testing.
 
 If the overlay or opponent boards do not appear after updating, re-check Screen Recording and Accessibility permissions. Toggle them off and on again if needed, then restart the app.
 
