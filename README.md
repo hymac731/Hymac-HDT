@@ -71,21 +71,22 @@ Hymac.HDT-2.1.dmg
 
 1. 打开 DMG。
 2. 把 `Hymac自用HDT.app` 拖进「应用程序」。
-3. 打开「终端」，运行：
+3. 在 DMG 中右键 `① 本地重签（先跑这个）.command`，选择「打开」，等待终端显示“完成”。
+4. 只有当 macOS 拦截、无法打开这个 `.command` 文件，或运行后没有显示“完成”时，才打开「终端」运行下面的备用命令：
 
 ```bash
 bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 ```
 
-4. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
-5. 系统设置 → 隐私与安全性：
+5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
+6. 系统设置 → 隐私与安全性：
    - 勾选「屏幕录制」里的 `Hymac自用HDT`
    - 勾选「辅助功能」里的 `Hymac自用HDT`
    - 本地重签不能自动勾选这些权限，必须由用户手动确认
-6. 完全退出并重新打开 `Hymac自用HDT`。
-7. 进炉石，看到覆盖层/阵容信息即安装成功。
+7. 完全退出并重新打开 `Hymac自用HDT`。
+8. 进炉石，看到覆盖层/阵容信息即安装成功。
 
-如果 macOS 提示无法验证 `.command` 是否包含恶意软件，不要点「移到废纸篓」，直接用上面的终端命令运行即可。
+同一个版本日常打开不需要重复重签，也不需要重复输入终端命令。
 
 ### 版本更新
 
@@ -94,16 +95,19 @@ bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 1. 打开新版 DMG。
 2. 把新的 `Hymac自用HDT.app` 拖进「应用程序」。
 3. 系统提示已存在同名 app 时，选择「替换」。
-4. 替换后再次打开「终端」，运行：
+4. 替换完成后，在 DMG 中右键 `① 本地重签（先跑这个）.command`，选择「打开」，重签一次。
+5. 只有当 macOS 拦截、无法打开这个 `.command` 文件，或运行后没有显示“完成”时，才使用「终端」运行下面的备用命令：
 
 ```bash
 bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 ```
 
-5. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
-6. 完全退出并重新打开 app 后再测试。
+6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
+7. 完全退出并重新打开 app 后再测试。
 
 如果更新后看不到阵容或覆盖层，重新检查「屏幕录制」和「辅助功能」权限，必要时取消勾选后重新勾选，并重启 app。
+
+同一个版本日常打开不需要再次重签；只有首次安装或用新版 app 覆盖旧版后才需要运行一次。
 
 ### Clash 设置
 
@@ -206,21 +210,22 @@ Hymac.HDT-2.1.dmg
 
 1. Open the DMG.
 2. Drag `Hymac自用HDT.app` into `Applications`.
-3. Open Terminal and run:
+3. In the DMG, right-click `① 本地重签（先跑这个）.command`, choose `Open`, and wait for Terminal to report completion.
+4. Only if macOS blocks the `.command` file, cannot open it, or it does not report completion, open Terminal and run this fallback command:
 
 ```bash
 bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 ```
 
-4. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
-5. In macOS System Settings → Privacy & Security, allow `Hymac自用HDT` under:
+5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
+6. In macOS System Settings → Privacy & Security, allow `Hymac自用HDT` under:
    - Screen Recording
    - Accessibility
    - The local re-sign command cannot enable these permissions for you; they require manual confirmation.
-6. Quit and reopen `Hymac自用HDT`.
-7. Launch Hearthstone. If the overlay and board information appear, installation is complete.
+7. Quit and reopen `Hymac自用HDT`.
+8. Launch Hearthstone. If the overlay and board information appear, installation is complete.
 
-If macOS says it cannot verify whether the `.command` file contains malware, do not move it to Trash. Use the Terminal command above instead.
+Daily launches of the same installed version do not require re-signing or re-entering the Terminal command.
 
 ### Updating From an Older Version
 
@@ -229,16 +234,19 @@ You do not need to manually delete the old app:
 1. Open the new DMG.
 2. Drag the new `Hymac自用HDT.app` into `Applications`.
 3. Choose `Replace` when macOS asks.
-4. Open Terminal and run:
+4. After replacing the app, right-click `① 本地重签（先跑这个）.command` in the DMG, choose `Open`, and re-sign once.
+5. Only if macOS blocks the `.command` file, cannot open it, or it does not report completion, use this Terminal fallback:
 
 ```bash
 bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 ```
 
-5. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
-6. Fully quit and reopen the app before testing.
+6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
+7. Fully quit and reopen the app before testing.
 
 If the overlay or opponent boards do not appear after updating, re-check Screen Recording and Accessibility permissions. Toggle them off and on again if needed, then restart the app.
+
+Daily launches of the same version do not require another re-sign. Run it once only after the first installation or after replacing the app with a newer build.
 
 ### Clash Setup
 
