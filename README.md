@@ -8,11 +8,11 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
-- **当前版本 / Current version:** 自用正式版 2.1.1 / Personal Stable Release 2.1.1
-- **正式构建 / Release build:** 149
+- **当前版本 / Current version:** 自用正式版 2.2 / Personal Stable Release 2.2
+- **正式构建 / Release build:** 150
 - **适用赛季 / Battlegrounds season:** 酒馆战棋第 14 赛季 / Battlegrounds Season 14
 - **游戏版本 / Hearthstone version:** Hearthstone 36.2.2
-- **Release 附件 / Release asset:** `Hymac.HDT-2.1.1.dmg`
+- **Release 附件 / Release asset:** `Hymac.HDT-2.2.dmg`
 
 > [!CAUTION]
 > **🔴 安装或升级后必须检查覆盖层权限**
@@ -46,13 +46,12 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 酒馆战棋战绩面板可以拖动、独立调整宽度、整体缩放并锁定位置。
 
-### 2.1.1 更新内容
+### 2.2 更新内容
 
-- 优化酒馆战绩面板的显示与布局，最近战绩最多显示 8 场。
-- 统一部分英雄名称显示。
-- 改进应用运行稳定性。
-- 其他界面与细节修复。
-- 继续使用 HSTracker 3.6.5 底座，适配 Hearthstone 36.2.2 和酒馆战棋第 14 赛季；本次未更新炉石卡牌数据。
+- 底座更新至 HSTracker 3.6.7，同步最新炉石卡牌数据。
+- 修正卡牌数据异常可能导致的覆盖层缺失等问题。
+- 合入上游覆盖层、酒馆战棋、Bob's Buddy 和双打模式的相关修复。
+- 包含应用稳定性、战绩面板与其他界面细节修复。
 - 保留一键拔线、本机连接精确匹配、Clash 进程识别修复引导、阵容恢复、版本提醒、战绩面板调整和自定义外观。
 
 ### 下载
@@ -60,7 +59,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-2.1.1.dmg
+Hymac.HDT-2.2.dmg
 ```
 
 ### 首次安装
@@ -71,7 +70,7 @@ Hymac.HDT-2.1.1.dmg
 4. 只有当 macOS 拦截、无法打开这个 `.command` 文件，或运行后没有显示“完成”时，才打开「终端」运行下面的备用命令：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.2/① 本地重签（安装后跑一次）.command"
 ```
 
 5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -95,7 +94,7 @@ bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.com
 5. 只有当 macOS 拦截、无法打开这个 `.command` 文件，或运行后没有显示“完成”时，才使用「终端」运行下面的备用命令：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.2/① 本地重签（安装后跑一次）.command"
 ```
 
 6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
@@ -123,7 +122,7 @@ Clash 在这里只是本地连接管理工具；追踪、胜率和阵容功能�
 
 自用版HDT 不会关闭 Wi-Fi，也不会让整台电脑断网。它会通过 Clash Verge 的本地连接接口读取当前网络连接，识别炉石的游戏服连接后，只删除这条连接。炉石客户端会进入短暂断线并自动重连，从而跳过一部分战斗动画。
 
-2.1.1 继续读取 macOS 本机已经建立的 Hearthstone TCP 连接，再与 Clash 中的纯 IP TCP + TUN 连接完整对应，因此不依赖固定游戏端口，也不会把带域名的战网连接当作拔线目标。进入实际对局后如果首次未匹配到，系统会在约 3 秒内自动重试，并提示下一步操作。
+2.2 继续读取 macOS 本机已经建立的 Hearthstone TCP 连接，再与 Clash 中的纯 IP TCP + TUN 连接完整对应，因此不依赖固定游戏端口，也不会把带域名的战网连接当作拔线目标。进入实际对局后如果首次未匹配到，系统会在约 3 秒内自动重试，并提示下一步操作。
 
 点红色「拔线」按钮旁边的齿轮，可以查看当前 Clash 状态：
 
@@ -181,13 +180,12 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Attempts to restore remembered opponent board states after reconnecting.
 - Move, resize the width, uniformly scale, and lock the Battlegrounds session statistics panel.
 
-### Version 2.1.1 Updates
+### Version 2.2 Updates
 
-- Improves the Battlegrounds session panel layout and shows up to 8 recent games.
-- Makes hero-name display more consistent.
-- Improves application stability.
-- Includes other minor interface and detail fixes.
-- Continues to use the HSTracker 3.6.5 base for Hearthstone 36.2.2 and Battlegrounds Season 14; this maintenance release does not update Hearthstone card data.
+- Updates the base to HSTracker 3.6.7 and synchronizes the latest Hearthstone card data.
+- Corrects card-data issues that could cause missing overlays and related display problems.
+- Includes upstream overlay, Battlegrounds, Bob's Buddy, and Duos fixes.
+- Includes application stability, session-panel, and other interface fixes.
 - Retains the reconnect helper, exact local connection matching, Clash repair guidance, opponent-board restoration, update reminders, adjustable session panel, and Hymac appearance.
 
 ### Download
@@ -195,7 +193,7 @@ This is a personal-use tool for learning and convenience. It is not an official 
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-2.1.1.dmg
+Hymac.HDT-2.2.dmg
 ```
 
 ### First-Time Installation
@@ -206,7 +204,7 @@ Hymac.HDT-2.1.1.dmg
 4. Only if macOS blocks the `.command` file, cannot open it, or it does not report completion, open Terminal and run this fallback command:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.2/① 本地重签（安装后跑一次）.command"
 ```
 
 5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -230,7 +228,7 @@ You do not need to manually delete the old app:
 5. Only if macOS blocks the `.command` file, cannot open it, or it does not report completion, use this Terminal fallback:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.2/① 本地重签（安装后跑一次）.command"
 ```
 
 6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
@@ -258,7 +256,7 @@ Process recognition becomes available only after entering an actual match. It is
 
 Hymac HDT does not turn off Wi-Fi and does not disconnect the whole Mac. It reads the current connection list through Clash Verge's local connection API, identifies the Hearthstone game-server connection, and closes only that connection. Hearthstone then briefly disconnects and reconnects, which can skip part of the combat animation.
 
-Version 2.1.1 continues to read the established local Hearthstone TCP connection and exactly matches it to the corresponding pure-IP TCP + TUN connection in Clash. It does not rely on a fixed game port and does not select Battle.net domain connections. If the first match is unavailable during an actual game, it retries automatically for about three seconds and shows the next step.
+Version 2.2 continues to read the established local Hearthstone TCP connection and exactly matches it to the corresponding pure-IP TCP + TUN connection in Clash. It does not rely on a fixed game port and does not select Battle.net domain connections. If the first match is unavailable during an actual game, it retries automatically for about three seconds and shows the next step.
 
 Click the gear button next to the red reconnect button to check Clash status:
 
