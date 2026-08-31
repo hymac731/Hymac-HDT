@@ -8,16 +8,16 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
-- **当前版本 / Current version:** 自用正式版 2.1 / Personal Stable Release 2.1
-- **正式构建 / Release build:** 148
+- **当前版本 / Current version:** 自用正式版 2.1.1 / Personal Stable Release 2.1.1
+- **正式构建 / Release build:** 149
 - **适用赛季 / Battlegrounds season:** 酒馆战棋第 14 赛季 / Battlegrounds Season 14
 - **游戏版本 / Hearthstone version:** Hearthstone 36.2.2
-- **Release 附件 / Release asset:** `Hymac.HDT-2.1.dmg`
+- **Release 附件 / Release asset:** `Hymac.HDT-2.1.1.dmg`
 
 > [!CAUTION]
 > **🔴 安装或升级后必须检查覆盖层权限**
 >
-> `① 本地重签（先跑这个）.command` **不能自动打开 macOS 隐私权限**。替换新版并完成本地重签后，请进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，确认 `Hymac自用HDT` 已开启，然后完全退出并重新打开 App。否则可能只看到红色“拔线”按钮，看不到阵容、胜率和战绩覆盖层。
+> `① 本地重签（安装后跑一次）.command` **不能自动打开 macOS 隐私权限**。替换新版并完成本地重签后，请进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，确认 `Hymac自用HDT` 已开启，然后完全退出并重新打开 App。否则可能只看到红色“拔线”按钮，看不到阵容、胜率和战绩覆盖层。
 
 > [!IMPORTANT]
 > **🔴 悬浮组件可以移动和调整**
@@ -46,36 +46,32 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 酒馆战棋战绩面板可以拖动、独立调整宽度、整体缩放并锁定位置。
 
-### 2.1 更新内容
+### 2.1.1 更新内容
 
-- 底层升级到 HSTracker 3.6.5，适配 Hearthstone 36.2.2 和酒馆战棋第 14 赛季，并同步最新卡牌数据。
-- 新增 Eternal Knight 和 Ancestral Automaton 计数器，更新可令酒馆等级 7 出现的饰品列表。
-- 合入上游战斗胜率、双人模式“最近对局”和 Sandy 崩溃修复，包括 Polarizing Beatboxer 附近的胜率计算修正。
-- 保留 2.0.1 已有的一键拔线、本机连接精确匹配、Clash 进程识别修复引导、阵容恢复、战绩面板拖动/宽度/缩放/锁定和自定义外观。
-- 新增 Hymac 版本提醒：每天最多检查一次 GitHub Release，发现新版时可下载、稍后提醒或忽略该版本，不会自动替换 App。
-- 修复 Bob's Buddy 开发自测可能导致 2.1 启动时意外退出的问题。
-- 补齐 Bob's Buddy 真实对局胜率计算所需的双架构运行组件，修复进入战斗后胜率框不显示的问题。
-- 修复拔线重连后战棋类型丢失、胜率与战绩覆盖层无法恢复的问题。
-- 修复重连恢复战绩面板时可能导致 hymac版HDT 意外退出的问题。
-- 拔线设置标题新增构建编号，方便准确确认安装包。
+- 优化酒馆战绩面板的显示与布局，最近战绩最多显示 8 场。
+- 统一部分英雄名称显示。
+- 改进应用运行稳定性。
+- 其他界面与细节修复。
+- 继续使用 HSTracker 3.6.5 底座，适配 Hearthstone 36.2.2 和酒馆战棋第 14 赛季；本次未更新炉石卡牌数据。
+- 保留一键拔线、本机连接精确匹配、Clash 进程识别修复引导、阵容恢复、版本提醒、战绩面板调整和自定义外观。
 
 ### 下载
 
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-2.1.dmg
+Hymac.HDT-2.1.1.dmg
 ```
 
 ### 首次安装
 
 1. 打开 DMG。
 2. 把 `Hymac自用HDT.app` 拖进「应用程序」。
-3. 在 DMG 中右键 `① 本地重签（先跑这个）.command`，选择「打开」，等待终端显示“完成”。
+3. 在 DMG 中右键 `① 本地重签（安装后跑一次）.command`，选择「打开」，等待终端显示“完成”。
 4. 只有当 macOS 拦截、无法打开这个 `.command` 文件，或运行后没有显示“完成”时，才打开「终端」运行下面的备用命令：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
 ```
 
 5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -95,11 +91,11 @@ bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
 1. 打开新版 DMG。
 2. 把新的 `Hymac自用HDT.app` 拖进「应用程序」。
 3. 系统提示已存在同名 app 时，选择「替换」。
-4. 替换完成后，在 DMG 中右键 `① 本地重签（先跑这个）.command`，选择「打开」，重签一次。
+4. 替换完成后，在 DMG 中右键 `① 本地重签（安装后跑一次）.command`，选择「打开」，重签一次。
 5. 只有当 macOS 拦截、无法打开这个 `.command` 文件，或运行后没有显示“完成”时，才使用「终端」运行下面的备用命令：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
 ```
 
 6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
@@ -127,7 +123,7 @@ Clash 在这里只是本地连接管理工具；追踪、胜率和阵容功能�
 
 自用版HDT 不会关闭 Wi-Fi，也不会让整台电脑断网。它会通过 Clash Verge 的本地连接接口读取当前网络连接，识别炉石的游戏服连接后，只删除这条连接。炉石客户端会进入短暂断线并自动重连，从而跳过一部分战斗动画。
 
-2.1 继续读取 macOS 本机已经建立的 Hearthstone TCP 连接，再与 Clash 中的纯 IP TCP + TUN 连接完整对应，因此不依赖固定游戏端口，也不会把带域名的战网连接当作拔线目标。进入实际对局后如果首次未匹配到，系统会在约 3 秒内自动重试，并提示下一步操作。
+2.1.1 继续读取 macOS 本机已经建立的 Hearthstone TCP 连接，再与 Clash 中的纯 IP TCP + TUN 连接完整对应，因此不依赖固定游戏端口，也不会把带域名的战网连接当作拔线目标。进入实际对局后如果首次未匹配到，系统会在约 3 秒内自动重试，并提示下一步操作。
 
 点红色「拔线」按钮旁边的齿轮，可以查看当前 Clash 状态：
 
@@ -185,36 +181,32 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Attempts to restore remembered opponent board states after reconnecting.
 - Move, resize the width, uniformly scale, and lock the Battlegrounds session statistics panel.
 
-### Version 2.1 Updates
+### Version 2.1.1 Updates
 
-- Updated the upstream base to HSTracker 3.6.5 for Hearthstone 36.2.2 and Battlegrounds Season 14, with the latest card data.
-- Added Eternal Knight and Ancestral Automaton counters and updated the list of Trinkets that cause Tavern Tier 7 to appear.
-- Included upstream combat-odds, Duos Latest Games, and Sandy crash fixes, including corrected odds around Polarizing Beatboxer.
-- Retained the reconnect helper, exact local connection matching, Clash process-recognition repair guidance, opponent-board restoration, adjustable session panel, and Hymac appearance from 2.0.1.
-- Added a daily Hymac GitHub Release reminder with Download, Remind Later, and Ignore options. It never replaces the app automatically.
-- Fixed a development-only Bob's Buddy smoke test that could terminate version 2.1 during launch.
-- Included the dual-architecture runtime component required by live Bob's Buddy simulations, fixing a missing combat-odds panel during real matches.
-- Restored the Battlegrounds game type after reconnecting so combat odds and session overlays can resume.
-- Fixed a session-panel layout crash that could terminate Hymac HDT immediately after reconnecting.
-- Added the internal build number to the reconnect settings title for precise package identification.
+- Improves the Battlegrounds session panel layout and shows up to 8 recent games.
+- Makes hero-name display more consistent.
+- Improves application stability.
+- Includes other minor interface and detail fixes.
+- Continues to use the HSTracker 3.6.5 base for Hearthstone 36.2.2 and Battlegrounds Season 14; this maintenance release does not update Hearthstone card data.
+- Retains the reconnect helper, exact local connection matching, Clash repair guidance, opponent-board restoration, update reminders, adjustable session panel, and Hymac appearance.
 
 ### Download
 
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-2.1.dmg
+Hymac.HDT-2.1.1.dmg
 ```
 
 ### First-Time Installation
 
 1. Open the DMG.
 2. Drag `Hymac自用HDT.app` into `Applications`.
-3. In the DMG, right-click `① 本地重签（先跑这个）.command`, choose `Open`, and wait for Terminal to report completion.
+3. In the DMG, right-click `① 本地重签（安装后跑一次）.command`, choose `Open`, and wait for Terminal to report completion.
 4. Only if macOS blocks the `.command` file, cannot open it, or it does not report completion, open Terminal and run this fallback command:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
 ```
 
 5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -234,11 +226,11 @@ You do not need to manually delete the old app:
 1. Open the new DMG.
 2. Drag the new `Hymac自用HDT.app` into `Applications`.
 3. Choose `Replace` when macOS asks.
-4. After replacing the app, right-click `① 本地重签（先跑这个）.command` in the DMG, choose `Open`, and re-sign once.
+4. After replacing the app, right-click `① 本地重签（安装后跑一次）.command` in the DMG, choose `Open`, and re-sign once.
 5. Only if macOS blocks the `.command` file, cannot open it, or it does not report completion, use this Terminal fallback:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.1/① 本地重签（先跑这个）.command"
+bash "/Volumes/Hymac自用HDT 2.1.1/① 本地重签（安装后跑一次）.command"
 ```
 
 6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
@@ -266,7 +258,7 @@ Process recognition becomes available only after entering an actual match. It is
 
 Hymac HDT does not turn off Wi-Fi and does not disconnect the whole Mac. It reads the current connection list through Clash Verge's local connection API, identifies the Hearthstone game-server connection, and closes only that connection. Hearthstone then briefly disconnects and reconnects, which can skip part of the combat animation.
 
-Version 2.1 continues to read the established local Hearthstone TCP connection and exactly matches it to the corresponding pure-IP TCP + TUN connection in Clash. It does not rely on a fixed game port and does not select Battle.net domain connections. If the first match is unavailable during an actual game, it retries automatically for about three seconds and shows the next step.
+Version 2.1.1 continues to read the established local Hearthstone TCP connection and exactly matches it to the corresponding pure-IP TCP + TUN connection in Clash. It does not rely on a fixed game port and does not select Battle.net domain connections. If the first match is unavailable during an actual game, it retries automatically for about three seconds and shows the next step.
 
 Click the gear button next to the red reconnect button to check Clash status:
 
