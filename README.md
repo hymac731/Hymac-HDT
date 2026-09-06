@@ -46,23 +46,6 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 酒馆战棋战绩面板可以拖动、独立调整宽度、整体缩放并锁定位置。
 
-### 2.3 更新内容
-
-- 底座更新至上游 HSTracker 3.6.8，适配炉石传说 36.4.2（酒馆战棋）。
-- 同步 macOS 稳定性、覆盖层与日志读取相关修复：覆盖层 / 卡图改为线程安全构建，修复 macOS 26 上覆盖层与卡牌 HUD 等后台线程崩溃，并修复重复启动日志读取器的问题。
-- 同步酒馆战棋与 Bob's Buddy 相关修复（Tavern Pinning 残留、Tier7 预加载、composition 指南加载、session MMR 格式化，以及 Bob's Buddy 一批计算与显示修复）。
-- 新增：战绩面板「最近对局」显示数量可在 **5 场 / 8 场 / 10 场** 之间选择，默认 8 场。
-- 常规稳定性与界面细节优化。
-- 保留一键拔线、本机连接精确匹配、Clash 进程识别修复引导、阵容恢复、版本提醒、战绩面板调整和自定义外观。
-
-### 历史版本：2.2 更新内容
-
-- 底座更新至 HSTracker 3.6.7，同步最新炉石卡牌数据。
-- 修正卡牌数据异常可能导致的覆盖层缺失等问题。
-- 合入上游覆盖层、酒馆战棋、Bob's Buddy 和双打模式的相关修复。
-- 包含应用稳定性、战绩面板与其他界面细节修复。
-- 保留一键拔线、本机连接精确匹配、Clash 进程识别修复引导、阵容恢复、版本提醒、战绩面板调整和自定义外观。
-
 ### 2.4 更新内容
 
 - 底座更新至 HSTracker 3.6.9。
@@ -70,6 +53,14 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 阵容指南可按本局已识别的可用种族筛选，并支持滚动浏览；赛前或种族池尚未识别时会显示全量内容。
 - 修复“随从与流派指南”攻略详情显示：固定在标准面板宽度内，中文文本自动换行、卡图完整排列，内容仅在面板内纵向滚动。
 - 保留一键重连、对手阵容、胜率模拟与可调整的战绩面板。
+
+### 2.3 更新内容
+
+- 底座更新至上游 HSTracker 3.6.8，适配炉石传说 36.4.2（酒馆战棋）。
+- 同步 macOS 稳定性、覆盖层与日志读取相关修复：覆盖层 / 卡图改为线程安全构建，修复 macOS 26 上覆盖层与卡牌 HUD 等后台线程崩溃，并修复重复启动日志读取器的问题。
+- 同步酒馆战棋与 Bob's Buddy 相关修复（Tavern Pinning 残留、Tier7 预加载、composition 指南加载、session MMR 格式化，以及 Bob's Buddy 一批计算与显示修复）。
+- 新增：战绩面板“最近对局”显示数量可在 **5 场 / 8 场 / 10 场** 之间选择，默认 8 场。
+- 保留一键拔线、本机连接精确匹配、Clash 进程识别修复引导、阵容恢复、版本提醒、战绩面板调整和自定义外观。
 
 ### 下载
 
@@ -197,6 +188,14 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Attempts to restore remembered opponent board states after reconnecting.
 - Move, resize the width, uniformly scale, and lock the Battlegrounds session statistics panel.
 
+### Version 2.4 Updates
+
+- Updates the base to HSTracker 3.6.9.
+- Saves recognized match records locally by default; records are not uploaded or shared.
+- Comp guides can filter to the races recognized in the current lobby and can be scrolled. The full list is shown before lobby races are known.
+- Fixes Comp Guide detail layout: the detail remains within the standard panel width, text wraps, card art is fully arranged, and content scrolls only inside the panel.
+- Retains the reconnect helper, opponent tracking, combat odds, and the adjustable session panel.
+
 ### Version 2.3 Updates
 
 - Updates the base to upstream HSTracker 3.6.8, targeting Hearthstone 36.4.2 (Battlegrounds).
@@ -205,22 +204,6 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - New: the Battlegrounds session panel's "Recent games" count is selectable between **5 / 8 / 10**, defaulting to 8.
 - Other stability and interface polish.
 - Retains the reconnect helper, exact local connection matching, Clash repair guidance, opponent-board restoration, update reminders, adjustable session panel, and Hymac appearance.
-
-### Version 2.2 Updates (historical)
-
-- Updates the base to HSTracker 3.6.7 and synchronizes the latest Hearthstone card data.
-- Corrects card-data issues that could cause missing overlays and related display problems.
-- Includes upstream overlay, Battlegrounds, Bob's Buddy, and Duos fixes.
-- Includes application stability, session-panel, and other interface fixes.
-- Retains the reconnect helper, exact local connection matching, Clash repair guidance, opponent-board restoration, update reminders, adjustable session panel, and Hymac appearance.
-
-### Version 2.4 Updates
-
-- Updates the base to HSTracker 3.6.9.
-- Saves recognized match records locally by default; records are not uploaded or shared.
-- Comp guides can filter to the races recognized in the current lobby and can be scrolled. The full list is shown before lobby races are known.
-- Fixes Comp Guide detail layout: the detail remains within the standard panel width, text wraps, card art is fully arranged, and content scrolls only inside the panel.
-- Retains the reconnect helper, opponent tracking, combat odds, and the adjustable session panel.
 
 ### Download
 
