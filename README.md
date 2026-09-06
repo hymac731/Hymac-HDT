@@ -8,11 +8,11 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
-- **当前版本 / Current version:** 自用正式版 2.3 / Personal Stable Release 2.3
-- **正式构建 / Release build:** 151
+- **当前版本 / Current version:** 自用正式版 2.4 / Personal Stable Release 2.4
+- **正式构建 / Release build:** 2405
 - **适用赛季 / Battlegrounds season:** 酒馆战棋第 14 赛季 / Battlegrounds Season 14
 - **游戏版本 / Hearthstone version:** Hearthstone 36.4.2
-- **Release 附件 / Release asset:** `Hymac.HDT-2.3.dmg`
+- **Release 附件 / Release asset:** `Hymac.HDT-2.4.dmg`
 
 > [!CAUTION]
 > **🔴 安装或升级后必须检查覆盖层权限**
@@ -63,12 +63,20 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 包含应用稳定性、战绩面板与其他界面细节修复。
 - 保留一键拔线、本机连接精确匹配、Clash 进程识别修复引导、阵容恢复、版本提醒、战绩面板调整和自定义外观。
 
+### 2.4 更新内容
+
+- 底座更新至 HSTracker 3.6.9。
+- 新增本机对局记录保存：已识别记录默认仅保存在本机，不上传、不共享。
+- 阵容指南可按本局已识别的可用种族筛选，并支持滚动浏览；赛前或种族池尚未识别时会显示全量内容。
+- 修复“随从与流派指南”攻略详情显示：固定在标准面板宽度内，中文文本自动换行、卡图完整排列，内容仅在面板内纵向滚动。
+- 保留一键重连、对手阵容、胜率模拟与可调整的战绩面板。
+
 ### 下载
 
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-2.3.dmg
+Hymac.HDT-2.4.dmg
 ```
 
 ### 首次安装
@@ -79,7 +87,7 @@ Hymac.HDT-2.3.dmg
 4. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**（不要每次安装都手动输入）：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.3 测试版/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
 ```
 
 5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -103,7 +111,7 @@ bash "/Volumes/Hymac自用HDT 2.3 测试版/① 本地重签（安装后跑一�
 5. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.3 测试版/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
 ```
 
 6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
@@ -206,12 +214,20 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Includes application stability, session-panel, and other interface fixes.
 - Retains the reconnect helper, exact local connection matching, Clash repair guidance, opponent-board restoration, update reminders, adjustable session panel, and Hymac appearance.
 
+### Version 2.4 Updates
+
+- Updates the base to HSTracker 3.6.9.
+- Saves recognized match records locally by default; records are not uploaded or shared.
+- Comp guides can filter to the races recognized in the current lobby and can be scrolled. The full list is shown before lobby races are known.
+- Fixes Comp Guide detail layout: the detail remains within the standard panel width, text wraps, card art is fully arranged, and content scrolls only inside the panel.
+- Retains the reconnect helper, opponent tracking, combat odds, and the adjustable session panel.
+
 ### Download
 
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-2.3.dmg
+Hymac.HDT-2.4.dmg
 ```
 
 ### First-Time Installation
@@ -222,7 +238,7 @@ Hymac.HDT-2.3.dmg
 4. Only if macOS blocks right-click-open, the `.command` file cannot be opened, or it does not report completion, use this Terminal command as a **fallback / troubleshooting step** (do not type it manually on every install):
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.3 测试版/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
 ```
 
 5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -246,7 +262,7 @@ You do not need to manually delete the old app:
 5. Only if macOS blocks right-click-open, cannot open the `.command` file, or it does not report completion, use this Terminal fallback:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.3 测试版/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
 ```
 
 6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
