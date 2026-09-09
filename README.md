@@ -113,7 +113,7 @@ bash "/Volumes/Hymac自用HDT 2.5/① 本地重签（安装后跑一次）.comma
 ```
 
 6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
-7. 完全退出并重新打开 app 后再测试。
+7. 完全退出并重新打开 App 后使用。
 
 如果更新后看不到阵容或覆盖层，重新检查「屏幕录制」和「辅助功能」权限，必要时取消勾选后重新勾选，并重启 app。
 
@@ -256,7 +256,7 @@ bash "/Volumes/Hymac自用HDT 2.5/① 本地重签（安装后跑一次）.comma
 ```
 
 6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
-7. Fully quit and reopen the app before testing.
+7. Fully quit and reopen the app before use.
 
 If the overlay or opponent boards do not appear after updating, re-check Screen Recording and Accessibility permissions. Toggle them off and on again if needed, then restart the app.
 
