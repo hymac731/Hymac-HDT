@@ -8,11 +8,11 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
-- **当前版本 / Current version:** 自用正式版 2.4 / Personal Stable Release 2.4
-- **正式构建 / Release build:** 2405
+- **当前版本 / Current version:** 自用正式版 2.5 / Personal Stable Release 2.5
+- **正式构建 / Release build:** 2503
 - **适用赛季 / Battlegrounds season:** 酒馆战棋第 14 赛季 / Battlegrounds Season 14
 - **游戏版本 / Hearthstone version:** Hearthstone 36.4.2
-- **Release 附件 / Release asset:** `Hymac.HDT-2.4.dmg`
+- **Release 附件 / Release asset:** `Hymac.HDT-2.5.dmg`
 
 > [!CAUTION]
 > **🔴 安装或升级后必须检查覆盖层权限**
@@ -46,6 +46,13 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 酒馆战棋战绩面板可以拖动、独立调整宽度、整体缩放并锁定位置。
 
+### 2.5 更新内容
+
+- Meta/阵容指南支持左侧解锁、拖动、锁定和复位，记住位置；向上移动已实战确认可用。
+- 修复冰箱（寒冰屏障）保护下的出局误判，调整拔线资格判断；**待实战验证**。
+- 覆盖层默认在炉石切到后台时隐藏。
+- 保留 2.4 的连接识别、拔线重试、阵容恢复与战绩看板。
+
 ### 2.4 更新内容
 
 - 底座更新至 HSTracker 3.6.9。
@@ -67,7 +74,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-2.4.dmg
+Hymac.HDT-2.5.dmg
 ```
 
 ### 首次安装
@@ -78,7 +85,7 @@ Hymac.HDT-2.4.dmg
 4. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**（不要每次安装都手动输入）：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.5/① 本地重签（安装后跑一次）.command"
 ```
 
 5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -102,7 +109,7 @@ bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.comma
 5. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**：
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.5/① 本地重签（安装后跑一次）.command"
 ```
 
 6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
@@ -210,7 +217,7 @@ This is a personal-use tool for learning and convenience. It is not an official 
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-2.4.dmg
+Hymac.HDT-2.5.dmg
 ```
 
 ### First-Time Installation
@@ -221,7 +228,7 @@ Hymac.HDT-2.4.dmg
 4. Only if macOS blocks right-click-open, the `.command` file cannot be opened, or it does not report completion, use this Terminal command as a **fallback / troubleshooting step** (do not type it manually on every install):
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.5/① 本地重签（安装后跑一次）.command"
 ```
 
 5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -245,7 +252,7 @@ You do not need to manually delete the old app:
 5. Only if macOS blocks right-click-open, cannot open the `.command` file, or it does not report completion, use this Terminal fallback:
 
 ```bash
-bash "/Volumes/Hymac自用HDT 2.4/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac自用HDT 2.5/① 本地重签（安装后跑一次）.command"
 ```
 
 6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
