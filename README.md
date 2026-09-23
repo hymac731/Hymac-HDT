@@ -10,7 +10,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 - **当前版本 / Current version:** 2.7 / Release 2.7
 - **构建号 / Build:** 2703
-- **游戏版本 / Hearthstone version:** Hearthstone 36.6
+- **游戏版本 / Hearthstone version:** Hearthstone 36.6.0
 - **Release 附件 / Release asset:** `Hymac.HDT-2.7.dmg`
 
 > [!CAUTION]
