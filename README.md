@@ -8,10 +8,10 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
-- **当前版本 / Current version:** 2.7 / Release 2.7
-- **构建号 / Build:** 2703
+- **当前版本 / Current version:** 2.7.1 / Release 2.7.1
+- **构建号 / Build:** 2711
 - **游戏版本 / Hearthstone version:** Hearthstone 36.6.0
-- **Release 附件 / Release asset:** `Hymac.HDT-2.7.dmg`
+- **Release 附件 / Release asset:** `Hymac.HDT-2.7.1.dmg`
 
 > [!CAUTION]
 > **🔴 安装或升级后必须检查覆盖层权限**
@@ -45,9 +45,15 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 酒馆战棋战绩面板可以拖动、独立调整宽度、整体缩放并锁定位置。
 
-### 从公开版 2.5 升级到 2.7
+### 2.7.1 更新内容
 
-GitHub 上一公开版是 2.5。2.6 和前期 2.7 仅在本机使用，没有单独发布；2.5 用户可直接安装 2.7，获得以下累计更新，无须逐版升级。
+- 适配 Clash Verge Rev 2.5.5 服务模式和 Sidecar 的本地接口路径，同时保留旧版 Clash Verge 路径，修复新版 Clash 显示“未检测到”的路径兼容问题。
+- 本机使用 Clash Verge 2.5.5 验证 HDT 能读取接口、识别游戏并完成两局；其他设备的实际拔线与恢复仍以测试为准。若 Clash 系统服务未启动，应先在 Clash Verge 中修复服务并开启 TUN。
+- 未来 2.5.6、2.6 等版本若沿用相同接口，可能继续适用；尚未测试，不保证兼容。Clash Party 等其他客户端暂未适配一键重连。
+
+### 2.7 更新内容（从 2.5 累计）
+
+2.7 已公开发布；2.6 和更早的 2.7 测试构建仅在本机使用。2.5 用户可直接升级到当前 2.7.1，无须逐版安装，并获得以下 2.7 累计更新。
 
 - 基于 HSTracker 3.6.12 更新酒馆战棋数据、神祇信息与 Bob’s Buddy；补齐异变种族“畸变怪”中文名称。
 - 胜率面板继续显示胜率和伤害信息，可独立等比缩放；加入本局英雄胜、平、负统计显示。
@@ -82,7 +88,7 @@ GitHub 上一公开版是 2.5。2.6 和前期 2.7 仅在本机使用，没有单
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-2.7.dmg
+Hymac.HDT-2.7.1.dmg
 ```
 
 ### 首次安装
@@ -93,7 +99,7 @@ Hymac.HDT-2.7.dmg
 4. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**（不要每次安装都手动输入）：
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
 ```
 
 5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -117,7 +123,7 @@ bash "/Volumes/Hymac HDT 2.7/① 本地重签（安装后跑一次）.command"
 5. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**：
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
 ```
 
 6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
@@ -203,9 +209,15 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Attempts to restore remembered opponent board states after reconnecting.
 - Move, resize the width, uniformly scale, and lock the Battlegrounds session statistics panel.
 
-### Updating from public version 2.5 to 2.7
+### Version 2.7.1 Updates
 
-The last public GitHub release was 2.5. Versions 2.6 and earlier 2.7 builds were used locally only. You can upgrade directly from 2.5 to 2.7; the changes below are cumulative.
+- Adds the local API paths used by Clash Verge Rev 2.5.5 Service and Sidecar modes while retaining the older Clash Verge path. This addresses the “Clash not detected” path mismatch.
+- On this Mac, HDT read the Clash Verge 2.5.5 API, recognized the game, and ran through two matches. Actual disconnect and recovery on other machines still require testing. If the Clash system service is unavailable, repair it in Clash Verge and enable TUN first.
+- Future versions such as 2.5.6 or 2.6 may work if they keep the same interface, but they have not been tested. The reconnect helper is not yet adapted for Clash Party or other clients.
+
+### Version 2.7 Updates (Cumulative Since 2.5)
+
+Version 2.7 was released publicly; 2.6 and earlier 2.7 test builds were local only. You can upgrade directly from 2.5 to the current 2.7.1 release and receive these cumulative 2.7 changes.
 
 - Updates the base to HSTracker 3.6.12, including Battlegrounds data, Deity information, and Bob’s Buddy, with a Chinese name for the Aberration race.
 - Keeps combat odds and damage information visible with independent scaling; adds per-game win, draw, and loss counts.
@@ -234,7 +246,7 @@ The last public GitHub release was 2.5. Versions 2.6 and earlier 2.7 builds were
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-2.7.dmg
+Hymac.HDT-2.7.1.dmg
 ```
 
 ### First-Time Installation
@@ -245,7 +257,7 @@ Hymac.HDT-2.7.dmg
 4. Only if macOS blocks right-click-open, the `.command` file cannot be opened, or it does not report completion, use this Terminal command as a **fallback / troubleshooting step** (do not type it manually on every install):
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
 ```
 
 5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -269,7 +281,7 @@ You do not need to manually delete the old app:
 5. Only if macOS blocks right-click-open, cannot open the `.command` file, or it does not report completion, use this Terminal fallback:
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
 ```
 
 6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
