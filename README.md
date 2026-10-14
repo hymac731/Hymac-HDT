@@ -8,10 +8,10 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
-- **当前版本 / Current version:** 2.7.1 / Release 2.7.1
-- **构建号 / Build:** 2711
-- **游戏版本 / Hearthstone version:** Hearthstone 36.6.0
-- **Release 附件 / Release asset:** `Hymac.HDT-2.7.1.dmg`
+- **当前版本 / Current version:** 2.8 / 2801
+- **构建号 / Build:** 2801
+- **游戏版本 / Hearthstone version:** Hearthstone 37.0.0
+- **Release 附件 / Release asset:** `Hymac.HDT-2.8.dmg`
 
 > [!CAUTION]
 > **🔴 安装或升级后必须检查覆盖层权限**
@@ -45,6 +45,19 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 酒馆战棋战绩面板可以拖动、独立调整宽度、整体缩放并锁定位置。
 
+### 2.8 更新内容
+
+2.8 把底座更新到上游 HSTracker 3.7.0，适配炉石 37.0.0。
+
+- 同步上游 3.7.0 的酒馆战棋数据、卡牌数据与 Bob’s Buddy（含上游的胜率计算修正）。
+- 阵容指南会根据你这局实际可用的内容偶尔调整推荐等级，并在面板上显示提示；Tier7 大厅面板改为在后台刷新，不再每次出现都转圈加载。
+- 纳入上游 3.6.14 的多项酒馆战棋修复：选择芬利英雄技能时显示等级、英雄统计信息与护甲；英雄指南跟随当前英雄技能；阵容统计考虑本局神祇；会话面板 MMR 显示修复；Tier7 偶发加载失败与大厅前界面不显示 Tier7 小组件的修复。
+- 保留一键重连（拔线）、冰箱（寒冰屏障）保护、重连后阵容恢复、可独立调整的战绩面板、中文攻略布局，以及 5 / 8 / 10 场战绩显示选择。
+- 齿轮设置窗口标题更新为「Hymac HDT 设置 · 版本 2.8（构建 2801）」。
+
+> [!NOTE]
+> **2.8 的实测状态：** 本版已由用户在本机完成两盘对局实测并确认可用。该结论仅限本机两盘，其他设备与其他场景未逐项报告。
+
 ### 2.7.1 更新内容
 
 - 适配 Clash Verge Rev 2.5.5 服务模式和 Sidecar 的本地接口路径，同时保留旧版 Clash Verge 路径，修复新版 Clash 显示“未检测到”的路径兼容问题。
@@ -53,7 +66,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ### 2.7 更新内容（从 2.5 累计）
 
-2.7 已公开发布；2.6 和更早的 2.7 测试构建仅在本机使用。2.5 用户可直接升级到当前 2.7.1，无须逐版安装，并获得以下 2.7 累计更新。
+2.7 和 2.7.1 是此前已公开发布的版本，2.6 和更早的 2.7 测试构建仅在本机使用。以下是当时 2.7 阶段的累计更新，保留在这里作为升级路径参考。2.5 用户不需要逐版安装：**可以直接从 2.5 升级到 2.8**，一次获得 2.7、2.7.1 与 2.8 的累计变化。
 
 - 基于 HSTracker 3.6.12 更新酒馆战棋数据、神祇信息与 Bob’s Buddy；补齐异变种族“畸变怪”中文名称。
 - 胜率面板继续显示胜率和伤害信息，可独立等比缩放；加入本局英雄胜、平、负统计显示。
@@ -88,18 +101,18 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-2.7.1.dmg
+Hymac.HDT-2.8.dmg
 ```
 
 ### 首次安装
 
 1. 打开 DMG。
 2. 把 `Hymac自用HDT.app` 拖到 DMG 内的「应用程序」快捷方式。
-3. **默认方式（推荐）：在 DMG 中右键 `① 本地重签（安装后跑一次）.command`，选择「打开」，等待终端显示“完成”。** 日常安装只用这一步即可完成重签，无需输入任何终端命令。
+3. **默认方式（推荐）：在 DMG 中右键 `① 本地重签（安装后跑一次）.command`，选择「打开」，等待终端显示“完成”。** 日常安装只用这一步即可完成重签，无需输入任何终端命令。该脚本会先清除下载隔离标记，再用本机身份完成本地重签并验证签名。
 4. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**（不要每次安装都手动输入）：
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
 ```
 
 5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -116,18 +129,19 @@ bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
 
 不需要先删除旧版本：
 
-1. 打开新版 DMG。
-2. 把新的 `Hymac自用HDT.app` 拖到 DMG 内的「应用程序」快捷方式。
-3. 系统提示已存在同名 app 时，选择「替换」。
-4. 替换完成后，**默认方式（推荐）：在 DMG 中右键 `① 本地重签（安装后跑一次）.command`，选择「打开」，重签一次。**
-5. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**：
+1. **先完全退出正在运行的旧版 `Hymac自用HDT`。** 替换 App 前旧进程必须先退出。
+2. 打开新版 DMG。
+3. 把新的 `Hymac自用HDT.app` 拖到 DMG 内的「应用程序」快捷方式。
+4. 系统提示已存在同名 app 时，选择「替换」。
+5. 替换完成后，**默认方式（推荐）：在 DMG 中右键 `① 本地重签（安装后跑一次）.command`，选择「打开」，重签一次。** 该脚本会先清除下载隔离标记，再用本机身份完成本地重签并验证签名。
+6. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**：
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
 ```
 
-6. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
-7. 完全退出并重新打开 App 后使用。
+7. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
+8. 完全退出并重新打开 App 后使用。
 
 如果更新后看不到阵容或覆盖层，重新检查「屏幕录制」和「辅助功能」权限，必要时取消勾选后重新勾选，并重启 app。
 
@@ -153,7 +167,7 @@ Clash 在这里只是本地连接管理工具；追踪、胜率和阵容功能�
 
 2.3 继续读取 macOS 本机已经建立的 Hearthstone TCP 连接，再与 Clash 中的纯 IP TCP + TUN 连接完整对应，因此不依赖固定游戏端口，也不会把带域名的战网连接当作拔线目标。进入实际对局后如果首次未匹配到，系统会在约 3 秒内自动重试，并提示下一步操作。
 
-点红色「拔线」按钮旁边的齿轮，可以查看当前 Clash 状态：
+点红色「拔线」按钮旁边的齿轮，可以查看当前 Clash 状态（2.8 中该窗口标题为「Hymac HDT 设置 · 版本 2.8（构建 2801）」）：
 
 ```text
 Clash: 已连接
@@ -209,6 +223,19 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Attempts to restore remembered opponent board states after reconnecting.
 - Move, resize the width, uniformly scale, and lock the Battlegrounds session statistics panel.
 
+### Version 2.8 Updates
+
+Version 2.8 updates the base to upstream HSTracker 3.7.0, targeting Hearthstone 37.0.0.
+
+- Brings in the Battlegrounds data, card data, and Bob's Buddy from upstream 3.7.0, including the upstream combat-odds fixes.
+- Comp Guides now occasionally adjust their tier based on what is available in your specific match and show a notice on the panel when they do; the Tier7 lobby panel now refreshes in the background instead of showing a loading spinner every time it reappears.
+- Includes the upstream 3.6.14 Battlegrounds fixes: tiers, hero stats, and armor when picking Sir Finley's hero power; Hero Guides that match your current hero power(s); Composition Stats that consider the match's Deity; session MMR display fixes; and fixes for Tier7 features occasionally not loading and the pre-lobby screen not showing the Tier7 widget.
+- Retains the one-click reconnect helper, Ice Block protection, opponent-board restoration after reconnecting, the adjustable session panel, the Chinese comp guide layout, and the 5 / 8 / 10 recent-games choice.
+- The settings window title is now "Hymac HDT 设置 · 版本 2.8（构建 2801）".
+
+> [!NOTE]
+> **Testing status for 2.8:** the user has run two matches on their own Mac with this build and confirmed it works. This conclusion covers those two matches on that machine only; other machines and other match scenarios have not been individually reported.
+
 ### Version 2.7.1 Updates
 
 - Adds the local API paths used by Clash Verge Rev 2.5.5 Service and Sidecar modes while retaining the older Clash Verge path. This addresses the “Clash not detected” path mismatch.
@@ -217,7 +244,7 @@ This is a personal-use tool for learning and convenience. It is not an official 
 
 ### Version 2.7 Updates (Cumulative Since 2.5)
 
-Version 2.7 was released publicly; 2.6 and earlier 2.7 test builds were local only. You can upgrade directly from 2.5 to the current 2.7.1 release and receive these cumulative 2.7 changes.
+Version 2.7 and 2.7.1 were the previously released public versions; 2.6 and earlier 2.7 test builds were local only. The notes below are the 2.7 changes, kept here for upgrade context. There is no need to install every version: **users on 2.5 can upgrade straight to 2.8** and receive the cumulative 2.7, 2.7.1, and 2.8 changes.
 
 - Updates the base to HSTracker 3.6.12, including Battlegrounds data, Deity information, and Bob’s Buddy, with a Chinese name for the Aberration race.
 - Keeps combat odds and damage information visible with independent scaling; adds per-game win, draw, and loss counts.
@@ -246,18 +273,18 @@ Version 2.7 was released publicly; 2.6 and earlier 2.7 test builds were local on
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-2.7.1.dmg
+Hymac.HDT-2.8.dmg
 ```
 
 ### First-Time Installation
 
 1. Open the DMG.
 2. Drag `Hymac自用HDT.app` onto the `应用程序` (Applications) shortcut inside the DMG.
-3. **Default (recommended): right-click `① 本地重签（安装后跑一次）.command` in the DMG, choose `Open`, and wait for Terminal to report completion.** This is all you need to re-sign on a normal install; no Terminal command is required.
+3. **Default (recommended): right-click `① 本地重签（安装后跑一次）.command` in the DMG, choose `Open`, and wait for Terminal to report completion.** This is all you need to re-sign on a normal install; no Terminal command is required. The script first clears the download quarantine flag, then re-signs the app with your local identity and verifies the signature.
 4. Only if macOS blocks right-click-open, the `.command` file cannot be opened, or it does not report completion, use this Terminal command as a **fallback / troubleshooting step** (do not type it manually on every install):
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
 ```
 
 5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -274,18 +301,19 @@ Daily launches of the same installed version do not require re-signing or re-ent
 
 You do not need to manually delete the old app:
 
-1. Open the new DMG.
-2. Drag the new `Hymac自用HDT.app` onto the `应用程序` (Applications) shortcut inside the DMG.
-3. Choose `Replace` when macOS asks.
-4. After replacing the app, **right-click `① 本地重签（安装后跑一次）.command` in the DMG, choose `Open`, and re-sign once.**
-5. Only if macOS blocks right-click-open, cannot open the `.command` file, or it does not report completion, use this Terminal fallback:
+1. **Fully quit the running older version of `Hymac自用HDT` first.** The old process must be closed before the app is replaced.
+2. Open the new DMG.
+3. Drag the new `Hymac自用HDT.app` onto the `应用程序` (Applications) shortcut inside the DMG.
+4. Choose `Replace` when macOS asks.
+5. After replacing the app, **right-click `① 本地重签（安装后跑一次）.command` in the DMG, choose `Open`, and re-sign once.** The script first clears the download quarantine flag, then re-signs the app with your local identity and verifies the signature.
+6. Only if macOS blocks right-click-open, cannot open the `.command` file, or it does not report completion, use this Terminal fallback:
 
 ```bash
-bash "/Volumes/Hymac HDT 2.7.1/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
 ```
 
-6. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
-7. Fully quit and reopen the app before use.
+7. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
+8. Fully quit and reopen the app before use.
 
 If the overlay or opponent boards do not appear after updating, re-check Screen Recording and Accessibility permissions. Toggle them off and on again if needed, then restart the app.
 
@@ -311,7 +339,7 @@ Hymac HDT does not turn off Wi-Fi and does not disconnect the whole Mac. It read
 
 Version 2.3 continues to read the established local Hearthstone TCP connection and exactly matches it to the corresponding pure-IP TCP + TUN connection in Clash. It does not rely on a fixed game port and does not select Battle.net domain connections. If the first match is unavailable during an actual game, it retries automatically for about three seconds and shows the next step.
 
-Click the gear button next to the red reconnect button to check Clash status:
+Click the gear button next to the red reconnect button to check Clash status (in 2.8 this window is titled "Hymac HDT 设置 · 版本 2.8（构建 2801）"):
 
 ```text
 Clash: Connected
@@ -329,6 +357,8 @@ The report is saved to the Desktop with a name like:
 ```text
 hymac-hdt-clash-diagnostic-20260626-1905.txt
 ```
+
+Send that txt file to the maintainer for troubleshooting.
 
 ### Notes
 
