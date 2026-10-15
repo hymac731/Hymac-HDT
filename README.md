@@ -50,7 +50,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 2.8 把底座更新到上游 HSTracker 3.7.0，适配炉石 37.0.0。
 
 - 同步上游 3.7.0 的酒馆战棋数据、卡牌数据与 Bob’s Buddy（含上游的胜率计算修正）。
-- 阵容指南会根据你这局实际可用的内容偶尔调整推荐等级，并在面板上显示提示；Tier7 大厅面板改为在后台刷新，不再每次出现都转圈加载。
+- 同步上游与 **Jeef** 合作改进的阵容指南：根据本局实际可用的内容动态调整推荐等级，并在面板上显示提示（相关功能取决于 HSReplay Tier7／试用资格）；Tier7 大厅面板改为在后台刷新，不再每次出现都转圈加载。
 - 纳入上游 3.6.14 的多项酒馆战棋修复：选择芬利英雄技能时显示等级、英雄统计信息与护甲；英雄指南跟随当前英雄技能；阵容统计考虑本局神祇；会话面板 MMR 显示修复；Tier7 偶发加载失败与大厅前界面不显示 Tier7 小组件的修复。
 - 保留一键重连（拔线）、冰箱（寒冰屏障）保护、重连后阵容恢复、可独立调整的战绩面板、中文攻略布局，以及 5 / 8 / 10 场战绩显示选择。
 - 齿轮设置窗口标题更新为「Hymac HDT 设置 · 版本 2.8（构建 2801）」。
@@ -228,7 +228,7 @@ This is a personal-use tool for learning and convenience. It is not an official 
 Version 2.8 updates the base to upstream HSTracker 3.7.0, targeting Hearthstone 37.0.0.
 
 - Brings in the Battlegrounds data, card data, and Bob's Buddy from upstream 3.7.0, including the upstream combat-odds fixes.
-- Comp Guides now occasionally adjust their tier based on what is available in your specific match and show a notice on the panel when they do; the Tier7 lobby panel now refreshes in the background instead of showing a loading spinner every time it reappears.
+- Brings in the upstream Comp Guides improvements developed in collaboration with **Jeef**: guide tiers can adjust to what is available in your specific match, with a notice when they change (subject to HSReplay Tier7 / trial eligibility); the Tier7 lobby panel now refreshes in the background instead of showing a loading spinner every time it reappears.
 - Includes the upstream 3.6.14 Battlegrounds fixes: tiers, hero stats, and armor when picking Sir Finley's hero power; Hero Guides that match your current hero power(s); Composition Stats that consider the match's Deity; session MMR display fixes; and fixes for Tier7 features occasionally not loading and the pre-lobby screen not showing the Tier7 widget.
 - Retains the one-click reconnect helper, Ice Block protection, opponent-board restoration after reconnecting, the adjustable session panel, the Chinese comp guide layout, and the 5 / 8 / 10 recent-games choice.
 - The settings window title is now "Hymac HDT 设置 · 版本 2.8（构建 2801）".
