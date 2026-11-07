@@ -8,10 +8,10 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ![炉石传说酒馆战棋第 14 赛季](assets/battlegrounds-season-14.png)
 
-- **当前版本 / Current version:** 2.8 / 2801
-- **构建号 / Build:** 2801
-- **游戏版本 / Hearthstone version:** Hearthstone 37.0.0
-- **Release 附件 / Release asset:** `Hymac.HDT-2.8.dmg`
+- **当前版本 / Current version:** 2.9 / 2901
+- **构建号 / Build:** 2901
+- **游戏适配目标 / Hearthstone target:** 37.2.0（完整实战兼容性待反馈 / full live compatibility pending）
+- **Release 附件 / Release asset:** `Hymac.HDT-2.9.dmg`
 
 > [!CAUTION]
 > **🔴 安装或升级后必须检查覆盖层权限**
@@ -45,6 +45,18 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 - 重连后尽量恢复已记录的对手阵容。
 - 酒馆战棋战绩面板可以拖动、独立调整宽度、整体缩放并锁定位置。
 
+### 2.9 更新内容
+
+可从 2.8 直接升级，保留此前 Hymac 功能。
+
+- 合入上游 3.7.1 更新；卡牌数据库、Bob’s Buddy、HearthMirror 与运行组件采用[官方 3.7.3 包](https://github.com/HearthSim/HSTracker-Releases/releases/tag/3.7.3)，已核对组件内容一致。
+- 修复种族名称解析，补充重生状态与 Soul Fermenter 的模拟输入。
+- 改进重连后的对局状态与阵容恢复，处理连续重置丢失阵容及跨局残留。
+- 保留 Clash 一键重连、冰箱保护、可调整战绩面板与中文指南。
+
+> [!IMPORTANT]
+> **2.9 的同步范围与验证状态：** 主程序基于 3.7.1 加本地修复，**并非完整官方 3.7.3**，不能保证涵盖 3.7.2 / 3.7.3 的全部主程序变化。已通过双架构构建、引擎加载及针对性回归检查；**尚无 2.9 实战验收记录**，炉石 37.2 的完整实战兼容性待反馈。需要回退时可下载 [2.8](../../releases/tag/v2.8)。
+
 ### 2.8 更新内容
 
 2.8 把底座更新到上游 HSTracker 3.7.0，适配炉石 37.0.0。
@@ -66,7 +78,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 
 ### 2.7 更新内容（从 2.5 累计）
 
-2.7 和 2.7.1 是此前已公开发布的版本，2.6 和更早的 2.7 测试构建仅在本机使用。以下是当时 2.7 阶段的累计更新，保留在这里作为升级路径参考。2.5 用户不需要逐版安装：**可以直接从 2.5 升级到 2.8**，一次获得 2.7、2.7.1 与 2.8 的累计变化。
+2.7 和 2.7.1 是此前已公开发布的版本，2.6 和更早的 2.7 测试构建仅在本机使用。以下是当时 2.7 阶段的累计更新，保留在这里作为升级路径参考。2.5 用户不需要逐版安装：**可以直接从 2.5 升级到 2.9**，一次获得 2.7、2.7.1、2.8 与 2.9 的累计变化。
 
 - 基于 HSTracker 3.6.12 更新酒馆战棋数据、神祇信息与 Bob’s Buddy；补齐异变种族“畸变怪”中文名称。
 - 胜率面板继续显示胜率和伤害信息，可独立等比缩放；加入本局英雄胜、平、负统计显示。
@@ -101,7 +113,7 @@ Built on top of the open-source [HearthSim/HSTracker](https://github.com/HearthS
 到 **[Releases](../../releases)** 下载：
 
 ```text
-Hymac.HDT-2.8.dmg
+Hymac.HDT-2.9.dmg
 ```
 
 ### 首次安装
@@ -112,7 +124,7 @@ Hymac.HDT-2.8.dmg
 4. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**（不要每次安装都手动输入）：
 
 ```bash
-bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.9/① 本地重签（安装后跑一次）.command"
 ```
 
 5. 如果终端提示找不到文件，先运行 `ls /Volumes`，确认 DMG 挂载出来的名字，再替换上面命令里的卷名。
@@ -137,7 +149,7 @@ bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
 6. 只有当 macOS 拦截右键打开、无法打开这个 `.command` 文件、或运行后没有显示“完成”时，才把下面的终端命令作为**排障备用**：
 
 ```bash
-bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.9/① 本地重签（安装后跑一次）.command"
 ```
 
 7. 进入“系统设置 → 隐私与安全性 → 屏幕与系统音频录制”，重新确认 `Hymac自用HDT` 的开关已经打开。
@@ -167,7 +179,7 @@ Clash 在这里只是本地连接管理工具；追踪、胜率和阵容功能�
 
 2.3 继续读取 macOS 本机已经建立的 Hearthstone TCP 连接，再与 Clash 中的纯 IP TCP + TUN 连接完整对应，因此不依赖固定游戏端口，也不会把带域名的战网连接当作拔线目标。进入实际对局后如果首次未匹配到，系统会在约 3 秒内自动重试，并提示下一步操作。
 
-点红色「拔线」按钮旁边的齿轮，可以查看当前 Clash 状态（2.8 中该窗口标题为「Hymac HDT 设置 · 版本 2.8（构建 2801）」）：
+点红色「拔线」按钮旁边的齿轮，可以查看当前 Clash 状态（2.9 中该窗口标题为「Hymac HDT 设置 · 版本 2.9（构建 2901）」）：
 
 ```text
 Clash: 已连接
@@ -223,6 +235,18 @@ This is a personal-use tool for learning and convenience. It is not an official 
 - Attempts to restore remembered opponent board states after reconnecting.
 - Move, resize the width, uniformly scale, and lock the Battlegrounds session statistics panel.
 
+### Version 2.9 Updates
+
+Upgrade directly from 2.8 while retaining the earlier Hymac features.
+
+- Incorporates upstream 3.7.1 changes. Card data, Bob’s Buddy, HearthMirror, and runtime components come from the [official 3.7.3 package](https://github.com/HearthSim/HSTracker-Releases/releases/tag/3.7.3), with component contents checked for equivalence.
+- Fixes race-name parsing and supplies reborn state and Soul Fermenter simulation inputs.
+- Improves match-state and opponent-board restoration after reconnecting, including repeated resets and clearing stale boards between games.
+- Retains the Clash reconnect helper, Ice Block protection, adjustable session panel, and Chinese guides.
+
+> [!IMPORTANT]
+> **Scope and testing for 2.9:** the main app uses 3.7.1 source plus local fixes; **this is not the full official 3.7.3 app** and does not guarantee all main-app changes from 3.7.2 / 3.7.3. Dual-architecture builds, engine loading, and targeted regression checks passed. **No live-match acceptance has been recorded for 2.9**; full Hearthstone 37.2 live compatibility awaits feedback. [2.8 remains available](../../releases/tag/v2.8) for rollback.
+
 ### Version 2.8 Updates
 
 Version 2.8 updates the base to upstream HSTracker 3.7.0, targeting Hearthstone 37.0.0.
@@ -244,7 +268,7 @@ Version 2.8 updates the base to upstream HSTracker 3.7.0, targeting Hearthstone 
 
 ### Version 2.7 Updates (Cumulative Since 2.5)
 
-Version 2.7 and 2.7.1 were the previously released public versions; 2.6 and earlier 2.7 test builds were local only. The notes below are the 2.7 changes, kept here for upgrade context. There is no need to install every version: **users on 2.5 can upgrade straight to 2.8** and receive the cumulative 2.7, 2.7.1, and 2.8 changes.
+Version 2.7 and 2.7.1 were the previously released public versions; 2.6 and earlier 2.7 test builds were local only. The notes below are the 2.7 changes, kept here for upgrade context. There is no need to install every version: **users on 2.5 can upgrade straight to 2.9** and receive the cumulative 2.7, 2.7.1, 2.8, and 2.9 changes.
 
 - Updates the base to HSTracker 3.6.12, including Battlegrounds data, Deity information, and Bob’s Buddy, with a Chinese name for the Aberration race.
 - Keeps combat odds and damage information visible with independent scaling; adds per-game win, draw, and loss counts.
@@ -273,7 +297,7 @@ Version 2.7 and 2.7.1 were the previously released public versions; 2.6 and earl
 Open **[Releases](../../releases)** and download:
 
 ```text
-Hymac.HDT-2.8.dmg
+Hymac.HDT-2.9.dmg
 ```
 
 ### First-Time Installation
@@ -284,7 +308,7 @@ Hymac.HDT-2.8.dmg
 4. Only if macOS blocks right-click-open, the `.command` file cannot be opened, or it does not report completion, use this Terminal command as a **fallback / troubleshooting step** (do not type it manually on every install):
 
 ```bash
-bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.9/① 本地重签（安装后跑一次）.command"
 ```
 
 5. If Terminal says the file cannot be found, run `ls /Volumes`, check the mounted DMG name, and replace the volume name in the command above.
@@ -309,7 +333,7 @@ You do not need to manually delete the old app:
 6. Only if macOS blocks right-click-open, cannot open the `.command` file, or it does not report completion, use this Terminal fallback:
 
 ```bash
-bash "/Volumes/Hymac HDT 2.8/① 本地重签（安装后跑一次）.command"
+bash "/Volumes/Hymac HDT 2.9/① 本地重签（安装后跑一次）.command"
 ```
 
 7. Open System Settings → Privacy & Security → Screen & System Audio Recording and verify that `Hymac自用HDT` is enabled.
@@ -339,7 +363,7 @@ Hymac HDT does not turn off Wi-Fi and does not disconnect the whole Mac. It read
 
 Version 2.3 continues to read the established local Hearthstone TCP connection and exactly matches it to the corresponding pure-IP TCP + TUN connection in Clash. It does not rely on a fixed game port and does not select Battle.net domain connections. If the first match is unavailable during an actual game, it retries automatically for about three seconds and shows the next step.
 
-Click the gear button next to the red reconnect button to check Clash status (in 2.8 this window is titled "Hymac HDT 设置 · 版本 2.8（构建 2801）"):
+Click the gear button next to the red reconnect button to check Clash status (in 2.9 this window is titled "Hymac HDT 设置 · 版本 2.9（构建 2901）"):
 
 ```text
 Clash: Connected
